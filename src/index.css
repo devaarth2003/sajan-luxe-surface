@@ -1,0 +1,298 @@
+/* ============================================================
+   SAJAN LUXE SURFACE — Global Design System
+   ============================================================ */
+
+:root {
+  /* Color Palette */
+  --black:        #080808;
+  --black-deep:   #050505;
+  --black-rich:   #0f0f0f;
+  --black-card:   #111111;
+  --black-soft:   #1a1a1a;
+  --black-border: #222222;
+
+  --gold:         #c9a84c;
+  --gold-light:   #e8c96a;
+  --gold-dark:    #9a7330;
+  --gold-pale:    #f5e6c8;
+  --gold-glow:    rgba(201, 168, 76, 0.15);
+  --gold-glow-lg: rgba(201, 168, 76, 0.08);
+
+  --white:        #ffffff;
+  --off-white:    #fafaf8;
+  --grey-light:   #cccccc;
+  --grey-mid:     #888888;
+  --grey-dark:    #444444;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-elegant: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  /* Spacing */
+  --section-pad: 120px 0;
+  --container-max: 1280px;
+  --container-pad: 0 48px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-mid:  0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-gold:  0 0 40px rgba(201, 168, 76, 0.2);
+  --shadow-card:  0 8px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow:  0 0 80px rgba(201, 168, 76, 0.12);
+}
+
+:root[data-theme="light"] {
+  --black:        #ffffff;
+  --black-deep:   #fcfcfc;
+  --black-rich:   #f5f5f5;
+  --black-card:   #ffffff;
+  --black-soft:   #fafafa;
+  --black-border: rgba(0, 0, 0, 0.08);
+
+  --white:        #111111;
+  --off-white:    #333333;
+  --grey-light:   #555555;
+  
+  --shadow-card:  0 8px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--off-white);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--black-deep);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 3px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-pad);
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--grey-light);
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin: 20px 0 32px;
+}
+
+.gold-line-center {
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  width: 80px;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: var(--transition-mid);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--black);
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
+}
+.btn-primary:hover {
+  box-shadow: 0 8px 40px rgba(201, 168, 76, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  color: var(--gold);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  background: var(--gold-glow);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--white);
+  background: rgba(255,255,255,0.04);
+}
+:root[data-theme="light"] .btn-ghost {
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.04);
+}
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   GLASS CARD
+   ============================================================ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-mid);
+}
+:root[data-theme="light"] .glass-card {
+  background: rgba(0, 0, 0, 0.02);
+}
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.glass-card:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-4px);
+}
+
+/* ============================================================
+   SECTION HEADER (centered)
+   ============================================================ */
+.section-header-center {
+  text-align: center;
+  margin-bottom: 72px;
+}
+.section-header-center .gold-line {
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  width: 80px;
+}
+.section-header-center .section-subtitle {
+  margin: 0 auto;
+}
+
+/* ============================================================
+   REVEAL ANIMATION BASE
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  :root {
+    --container-pad: 0 32px;
+  }
+  .section-pad { padding: 80px 0; }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-pad: 0 20px;
+  }
+  html { font-size: 15px; }
+}

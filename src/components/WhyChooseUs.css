@@ -1,0 +1,102 @@
+.why {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--black) 0%, var(--black-rich) 50%, var(--black) 100%);
+}
+
+.why__bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 18rem);
+  font-weight: 700;
+  color: rgba(201, 168, 76, 0.025);
+  letter-spacing: 0.3em;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.why__card {
+  padding: 36px 32px;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.why__card-num {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(201, 168, 76, 0.3);
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease;
+}
+.why__card:hover .why__card-num {
+  color: rgba(201, 168, 76, 0.7);
+}
+
+.why__icon {
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.why__card:hover .why__icon {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.why__card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.why__card-desc {
+  font-size: 0.88rem;
+  color: var(--grey-mid);
+  line-height: 1.75;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+.why__card:hover .why__card-desc {
+  color: var(--grey-light);
+}
+
+.why__card-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+  transition: width 0.4s ease;
+  border-radius: 0 0 0 4px;
+}
+.why__card:hover .why__card-line {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .why__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .why { padding: 80px 0; }
+  .why__grid { grid-template-columns: 1fr; }
+}
