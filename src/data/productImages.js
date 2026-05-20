@@ -94,6 +94,25 @@ export const productImages = {
     "/images/Wallpaper/Screenshot 2026-05-19 120740.png",
     "/images/Wallpaper/Screenshot 2026-05-19 120832.png"
   ],
+  "3D mirror panal": [
+    "/images/3D mirror panal/Screenshot 2026-05-20 125549.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125608.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125645.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125659.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125708.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125721.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125731.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125744.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125754.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125811.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125823.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125833.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125848.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125901.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125910.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125927.png",
+    "/images/3D mirror panal/Screenshot 2026-05-20 125938.png"
+  ],
   "Curtains": [
     "/images/Curtains/Screenshot 2026-05-19 121042.png",
     "/images/Curtains/Screenshot 2026-05-19 121050.png",

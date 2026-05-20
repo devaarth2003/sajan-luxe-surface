@@ -62,6 +62,7 @@ export default function Footer() {
             <nav className="footer__nav">
               <a href="#products">Carpets & Curtains</a>
               <a href="#products">Wallpapers & Mats</a>
+              <a href="#products">3D Mirror Panels</a>
               <a href="#products">UV & PVC Sheets</a>
               <a href="#products">Vinyl Flooring</a>
               <a href="#products">Artificial Grass</a>

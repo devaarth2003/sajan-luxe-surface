@@ -72,7 +72,7 @@ export default function Hero() {
 
         {/* Product Pills */}
         <div className="hero__pills">
-          {['UV Sheets', 'Vinyl Flooring', 'Wallpapers', 'Carpets', 'Curtains', 'Artificial Grass'].map((p) => (
+          {['UV Sheets', 'Vinyl Flooring', 'Wallpapers', '3D Mirror Panels', 'Carpets', 'Curtains', 'Artificial Grass'].map((p) => (
             <span key={p} className="hero__pill">{p}</span>
           ))}
         </div>
